@@ -1,0 +1,206 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: $var-2-rgba;
+    transition: opacity $var-1-animation;
+
+    // Mobile / Tablet Modal-Backdrop
+    @media screen and (max-width: 1199px) {
+        overflow-y: scroll;
+    }
+}
+
+.backdrop.is-hidden {
+    visibility: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 72px 24px 24px 24px;
+    border-radius: 4px;
+    background-color: $var-10;
+    box-shadow: $var-4-shadow;
+    transition: transform $var-1-animation;
+
+    // Responsive Mobile / Tablet Modal-Container
+    @media screen and (max-width: 1199px) {
+        top: 10%;
+        transform: translateX(-50%);
+        max-width: 93%;
+    }
+
+    // Mobile Modal-Container
+    @media screen and (min-width: 428px) and (max-width: 767px) {
+        max-width: 392px;
+    }
+
+    // Tablet / PC Modal-Container
+    @media screen and (min-width: 768px) {
+        max-width: 408px;
+    }
+}
+
+.modal__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-24px, 24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $var-5;
+    border: $var-5-border;
+    transition: background-color $var-1-animation, fill $var-1-animation, border $var-1-animation;
+    
+    &:hover, &:focus {
+        background-color: $var-6;
+        border: transparent;
+    }
+
+    &:hover .modal__btn-close-icon, 
+    &:focus .modal__btn-close-icon {
+        fill: $var-4;
+    }
+}
+
+.modal__btn-close-icon {
+    width: 8px;
+    height: 8px;
+    fill: $var-2;
+    transition: fill $var-1-animation;
+}
+
+.modal__title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.modal__input-container {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.modal__input-label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $var-8;
+    margin-bottom: 4px;
+}
+
+.modal__input-field {
+    width: 100%;
+    height: 40px;
+    padding: 11px 16px 11px 38px;
+    outline: none;
+    border-radius: 4px;
+    border: $var-6-border;
+    color: $var-2;
+    transition: border-color $var-1-animation;
+
+    &:focus-within {
+        border-color: $var-1;
+    }
+
+    &:focus-within+.modal__input-icon {
+        fill: $var-1;
+    }
+}
+
+.modal__input-field.comment {
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 8px 16px 0px 16px;
+    margin-bottom: 16px;
+
+    &::placeholder {
+        color: $var-2-rgba;
+    }
+}
+
+.modal__input-icon {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 18px;
+    height: 24px;
+    color: $var-2;
+    fill: $var-2;
+    transition: fill $var-1-animation;
+
+    &.person {
+        top: 11px;
+        height: 18px;
+    }
+}
+
+.modal__checkbox-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    gap: 8px;
+    color: $var-8;
+    margin-bottom: 24px;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 16px;
+    padding: 4px 3px;
+    border-radius: 2px;
+    border: $var-7-border;
+    fill: transparent;
+    transition: fill $var-1-animation, background-color $var-1-animation, border-color $var-1-animation;
+
+    .modal-checkbox:checked+& {
+            fill: $var-7;
+            background-color: $var-6;
+            border-color: transparent;
+        }
+}
+
+.modal__privacy-policy-link {
+    text-decoration: underline;
+    color: $var-1;
+}
+
+.modal-btn-send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    line-height: 1.5;
+    color: $var-4;
+    background-color: $var-1;
+    box-shadow: $var-2-shadow;
+    transition: background-color $var-1-animation;
+
+    &:hover, &:focus {
+        background-color: $var-6;
+    }
+}

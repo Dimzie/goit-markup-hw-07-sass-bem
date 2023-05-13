@@ -1,0 +1,80 @@
+.customers {
+    padding: 120px 0px;
+
+    // Mobile / Tablet Customers
+     @media screen and (max-width: 1199px) {
+        padding: 96px 0px;
+    }
+}
+
+.customers__container {
+
+    // Tablet Customers__Container
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0px 108px;
+    }
+}
+
+.customers__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.customers__list {
+    display: flex;
+    gap: 24px;
+
+    // Mobile Customers__List
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 72px;
+    }
+    
+    // Tablet Customers__List
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+         row-gap: 72px;
+    }
+}
+
+.customers__item {
+    width: calc((100% - 120px) / 6);
+
+    // Mobile Customers__Item
+    @media screen and (max-width: 767px) {
+        width: calc((100% - 16px) / 2);
+    }
+    
+    // Tablet Customers__Item
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 48px) / 3);
+    }
+}
+
+.customers__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+    border-radius: 4px;
+    border: $var-2-border;
+    transition: border-color $var-1-animation;
+
+    &:hover, &:focus {
+        border-color: $var-6;
+    }
+
+    &:hover .customers__icon, &:focus .customers__icon {
+        fill: $var-6;
+    }
+}
+
+.customers__icon {
+    width: 104px;
+    height: 56px;
+    fill: $var-8;
+    transition: fill $var-1-animation;
+}

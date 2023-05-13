@@ -1,0 +1,125 @@
+.header__mobile-btn {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+
+    // Tablet / PC Header__Mobile-Btn
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.header__mobile-btn-icon {
+    width: 32px;
+    height: 32px;
+    stroke: $var-2;
+    transition: stroke $var-1-animation;
+
+    .header__mobile-btn:hover &,
+    .header__mobile-btn:focus & {
+        stroke: $var-6;
+    }
+}
+
+.header__mobile-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 35px 40px 40px;
+    background-color: $var-4;
+    transform: translateX(100%);
+    transition: transform $var-1-animation;
+
+    // Tablet / PC Header__Mobile-Container
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.header__mobile-container.is-open {
+    transform: translateX(0);
+}
+
+.mobile-container__btn-close {
+    background: $var-1-rgba;
+}
+
+.mobile-container__tabs-container {
+    display: inline-block;
+}
+
+.tabs-container__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tabs-container__item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    transition: color $var-1-animation;
+
+    &:hover, &:focus {
+        color: $var-6;
+    }
+}
+
+.address-socials__mobile-address {
+    font-style: normal;
+}
+
+.mobile-address__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.mobile-address__item {
+    color: $var-3;
+    transition: color $var-1-animation;
+
+    &:hover, &:focus {
+        color: $var-6;
+    }
+}
+
+.mobile-address__link.tel {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+
+    // Mobile Mobile-Address__Link Tel
+    @media screen and (max-width: 427px) {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.11;
+    }
+}
+
+.mobile-address__link.mail {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.mobile-socials__list {
+    gap: 64px;
+
+    // Responsive Mobile-Socicals-List
+    @media screen and (min-width: 320px) and (max-width: 427px) {
+        gap: 28px;
+    }
+}
+
+.active-mobile-tab {
+    color: $var-6;
+}

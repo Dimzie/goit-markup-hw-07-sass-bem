@@ -1,0 +1,25 @@
+.work {
+    padding-bottom: 120px;
+
+    // Mobile / Tablet Work
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.work__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.work__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.work__item {
+    width: calc((100% - 48px) /3);
+}

@@ -1,0 +1,103 @@
+.hero {
+    padding: 188px 0px;
+
+    // Mobile / Tablet Hero 
+    @media screen and (max-width: 1199px) {
+        padding: 112px 0px;
+    }
+}
+
+.overlay {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $var-2;
+    background-size: cover;
+    background-position: center;
+
+    // Responsive Mobile Overlay
+    @media screen and (max-width: 427px) {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/studio-tab/hero-section/320px-427px/hero-bckg-428-1x.jpg');
+
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)), url(../images/studio-tab/hero-section/320px-427px/hero-bckg-856-2x.jpg);
+        }
+    }
+
+    // Mobile Overlay
+    @media screen and (min-width: 428px) and (max-width: 767px) {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/studio-tab/hero-section/428px-767px/hero-bckg-768-1x.jpg');
+
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),url(../images/studio-tab/hero-section/428px-767px/hero-bckg-1536-2x.jpg);
+        }
+    }
+
+    // Tablet / PC Overlay 
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/studio-tab/hero-section/768px+/hero-bckg-1440-1x.jpg');
+    
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/studio-tab/hero-section/768px+/hero-bckg-2880-2x.jpg);
+        }
+    }
+}
+
+.hero__content {
+    width: 496px;
+    text-align: center;
+    margin: 0 auto;
+
+    // Mobile Hero__Content
+    @media screen and (max-width: 767px) {
+        max-width: 320px;
+    }
+}
+
+.h1-title {
+    display: block;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    color: $var-4;
+    margin-bottom: 48px;
+
+    // Mobile H1-Title
+    @media screen and (max-width: 767px) {
+        font-size: 36px;
+        line-height: 1.11;
+        margin-bottom: 72px;
+    }
+    
+    // Tablet H1-Title
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 36px;
+    }
+}
+
+.hero-btn {
+    min-width: 169px;
+    min-height: 56px;
+    font-weight: 500;
+    line-height: 1.5;
+    border: none;
+    color: $var-4;
+    background-color: $var-1;
+    box-shadow: $var-2-shadow;
+    transition: background-color $var-1-animation;
+
+    &:hover, &:focus {
+        background-color: $var-6;
+    }
+}
